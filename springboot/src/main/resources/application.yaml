@@ -1,2 +1,10 @@
 server:
   port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://moisel.net:5432/springboot
+    username: nterra
+    password: springboot
+  jpa:
+    hibernate:
+      ddl-auto: update
