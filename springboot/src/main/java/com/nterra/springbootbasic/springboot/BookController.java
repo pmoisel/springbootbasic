@@ -26,6 +26,11 @@ public class BookController {
     return ResponseEntity.ok(bookService.getAllBooks());
   }
 
+  @GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
+  public ResponseEntity<Iterable<Book>> getBooksAsXML() {
+    return ResponseEntity.ok(bookService.getAllBooks());
+  }
+
   @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<Book> postBook(@RequestBody Book book) {
     return ResponseEntity.ok(bookService.createBook(book));
